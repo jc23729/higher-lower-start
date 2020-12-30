@@ -10,8 +10,13 @@ def format_data(account):
   account_descr = account["description"]
   account_country = account["country"]
   return(f"{account_name}, a {account_descr}, from {account_country}")
-
-
+# Check if user is correct
+def check_answer(guess, a_followers, b_followers):
+  """use if statement to check if user is correct"""
+  if a_followers > b_followers:
+    return guess == "a"
+  else:
+    return guess == "b"
 # Display the art
 print(logo)
 
@@ -25,12 +30,16 @@ print(f"Compare A: {format_data(account_a)}.")
 print(vs)
 print(f"Compare B: {format_data(account_b)}.")
 # Ask the user for a guess
-input("Who has more followers? Type 'A' or 'B': ").lower
-
-# Check if user is correct
+guess = input("Who has more followers? Type 'A' or 'B': ").lower()
 
 
-# Get the follower count of each account
+# Get the follower count of each account, so we setup a variable a_follower_count and we set it to equal, the account_a pulling from the dict of data
+a_follower_count = account_a["follower_count"]
+b_follower_count = account_b["follower_count"]
+
+# Check if user is correct #######################we're going to move it to TOP and make a reusable function 
+
+
 
 
 # Use if statement to check if user is correct
