@@ -1,5 +1,16 @@
 ###Break down the problem###
 
+
+# Display the art
+
+
+# Generate a random account from game data
+
+
+
+# How do we format the data account into a printable format
+
+
 # Ask the user for a guess
 
 
