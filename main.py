@@ -2,6 +2,15 @@ from art import logo, vs
 from game_data import data
 import random
 
+# How do we format the data account into a printable format//So we know that the data is a dictionary and we accesss with a key value pair
+#this will pull out from the dic
+def format_data(account):
+  """Format account data into printable format"""
+  account_name = account["name"]
+  account_descr = account["description"]
+  account_country = account["country"]
+  return(f"{account_name}, a {account_descr}, from {account_country}")
+
 
 # Display the art
 print(logo)
@@ -12,9 +21,9 @@ account_b = random.choice(data)
 if account_a == account_b:
   account_b = random.choice(data)
 
-# How do we format the data account into a printable format//So we know that the data is a dictionary and we accesss with a key value pair
-
-
+print(f"Compare A: {format_data(account_a)}.")
+print(vs)
+print(f"Compare B: {format_data(account_b)}.")
 # Ask the user for a guess
 
 
